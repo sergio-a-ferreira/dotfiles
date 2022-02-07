@@ -10,7 +10,7 @@
 
 * * *
 
-#### Getting Started ####
+### Getting Started ###
 General purpose configuration files for bash and ksh shells, and applications like vim, nano, git, dircolors.
 
 Files for specific distros / flavours, desktop environments / window managers, terminals or other apllications shall have their own directory with proper instructions.
