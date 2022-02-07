@@ -3,7 +3,7 @@
 # dotfiles #
 
 <p align="center">
-<img alt="Logo" src="assets/banner.png" style="width:95%; height:120px;">
+<img alt="Logo" src="https://github.com/sergio-a-ferreira/dotfiles/blob/main/assets/banner.jpg" style="width:96%; height:120px;">
 </p>
 
 ##### shell and applications settings and configuration files. #####
@@ -75,8 +75,6 @@ rm /tmp/lscolors.tmp
 no prerequisites needed; just the application / software to set.
 
 some aliases use decorate sofware like exa (ls) and vivid (dircolors); fallbacks to GNU Utils tools are provided.
-
-* * * 
 
 #### Installation ####
 
