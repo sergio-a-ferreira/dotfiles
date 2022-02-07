@@ -87,3 +87,11 @@ cd dotfiles
 sh ./install.sh
 ```
 
+### Authors ###
+
+* **Sergio Ferreira** - *Initial work* - [sergio-a-ferreira](https://github.com/sergio-a-ferreira)
+
+
+### License ####
+
+This project is licensed under the UnLicense - see the [LICENSE](LICENSE) file for details
