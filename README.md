@@ -66,9 +66,9 @@ To set up follow the instructions below, or simply run the script install.sh in 
 
 - #### neofetch.config ####
 
-  git configuration file.
+  neofetch configuration file.
 
-  to enable symlink ${HOME}/.gitconfig to the git.config file:
+  to enable symlink ${HOME}/.config/neofetch/config.conf to the neofetch.config file:
 
   ```
   ln -s  ~/dotfiles/neofetch.config ~/.config/neofetch/config.conf
