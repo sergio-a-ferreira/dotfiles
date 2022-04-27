@@ -64,6 +64,17 @@ To set up follow the instructions below, or simply run the script install.sh in 
     rm /tmp/lscolors.tmp
   ```
 
+- #### neofetch.config ####
+
+  git configuration file.
+
+  to enable symlink ${HOME}/.gitconfig to the git.config file:
+
+  ```
+  ln -s  ~/dotfiles/neofetch.config ~/.config/neofetch/config.conf
+
+  ```
+
 * * * 
 
 ### Prerequisites ###

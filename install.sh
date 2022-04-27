@@ -30,6 +30,7 @@ typeset -A file_info=(
 	[profile]="source|${HOME}/dotfiles/profile.config|${HOME}/.bashrc"
 	[vim]="link|${HOME}/dotfiles/vim.config|${HOME}/.vimrc"
 	[git]="link|${HOME}/dotfiles/git.config|${HOME}/.gitconfig"
+	[neofetch]="link|${HOME}/dotfiles/neofetch.config|${HOME}/.config/neofetch"
 	# add new files here
 
 )
