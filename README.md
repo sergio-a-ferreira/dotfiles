@@ -3,7 +3,7 @@
 # dotfiles #
 
 <p align="center">
-<img alt="Logo" src="https://github.com/sergio-a-ferreira/dotfiles/blob/main/assets/dotfiles.jpeg" style="width:96%; height:80px;">
+<img alt="Logo" src="https://github.com/sergio-a-ferreira/dotfiles/blob/main/assets/dotfiles.jpeg" style="width:90%; height:400px;">
 </p>
 
 ##### shell and applications settings and configuration files. #####
