@@ -1,10 +1,5 @@
 #! /usr/bin/env bash
 # ==============================================================================
-#  ___   / _|   ___   _ __   _ __     ___  | |_ 
-# / __| | |_   / _ \ | '__| | '_ \   / _ \ | __|
-# \__ \ |  _| |  __/ | |    | | | | |  __/ | |_ 
-# |___/ |_|    \___| |_|    |_| |_|  \___|  \__|
-# 
 # Name        : install.sh
 # Version     : v0.1
 # Description : dotfiles installation script
@@ -21,16 +16,22 @@
 #               the files / directories which are marked for deletion are 
 #                 renamed with a suffix .orig_df_<yyyymmddhhmmss>
 #               for example if a file named .vimrc exists it's renamed to 
-#                 .vimrc.orig_df_yyyymmddhhmmss
+#                 .vimrc.orig_yyyymmddhhmmss
 #
 # ==============================================================================
-# configure files to deploy here:
+DOTFILES_DIR="${HOME}/Projects/dotfiles"
+
+# configure files to deploy here
+# example:
+# [filetype]="action|dotfiles file|/path/to/deploy"
+# action: copy link source
+
 typeset -A file_info=(
 
-	[profile]="source|${HOME}/dotfiles/profile.config|${HOME}/.bashrc"
-	[vim]="link|${HOME}/dotfiles/vim.config|${HOME}/.vimrc"
-	[git]="link|${HOME}/dotfiles/git.config|${HOME}/.gitconfig"
-	[neofetch]="link|${HOME}/dotfiles/neofetch.config|${HOME}/.config/neofetch"
+	[profile]="source|${DOTFILES_DIR}/profile.config|${HOME}/.bashrc"
+	[vim]="link|${DOTFILES_DIR}/vim.config|${HOME}/.vimrc"
+	[git]="link|${DOTFILES_DIR}/git.config|${HOME}/.gitconfig"
+	[neofetch]="link|${DOTFILES_DIR}/neofetch.config|${HOME}/.config/neofetch/config.conf"
 	# add new files here
 
 )
@@ -68,7 +69,7 @@ getTimestamp(){
 }
 
 # ------------------------------------------------------------------------------
-copy_(){
+copyFile(){
 
 	# Description: copy a file; if file exists make backup
 	# Arguments  : 1 file origin
@@ -89,7 +90,7 @@ copy_(){
 }
 
 # ------------------------------------------------------------------------------
-link_(){
+linkFile(){
 
 	# Description: link a file; if link exists replace it
 	# Arguments  : 1 file origin
@@ -137,7 +138,7 @@ backUp(){
 
 
 # ------------------------------------------------------------------------------
-source_(){
+sourceFile(){
 
 	# Description: copy a file; if file exists make backup
 	# Arguments  : 1 file origin
@@ -152,8 +153,8 @@ source_(){
 
 	writeMessage "sourcing file ${origin} in ${destiny}"
 
-	typeset msg_id="# source dotfiles/profile.config"
-	typeset msg_line='[ -r ~/dotfiles/profile.config ] && . ~/dotfiles/profile.config'
+	typeset msg_id="# source ${origin}"
+	typeset msg_line='[ -r ${origin} ] && . ${origin}'
 
 	if [ -f ${destiny} ]; then
 		grep -q "${msg_id}" ${destiny} && return 0
@@ -186,11 +187,11 @@ getInstallInfo(){
 		typeset destiny="${3}"
 
 		case "${method}" in
-			"source") source_ "${origin}" "${destiny}"
+			"source") sourceFile "${origin}" "${destiny}"
 			;;
-			"link")	link_ "${origin}" "${destiny}"
+			"link")	linkFile "${origin}" "${destiny}"
 			;;
-			"copy")	copy_ "${origin}" "${destiny}"
+			"copy")	copyFile "${origin}" "${destiny}"
 			;;
 		esac
 	done
@@ -218,7 +219,7 @@ main(){
 	# end process
 	writeMessage "end"
 
-	return ${rc}
+	exit ${rc}
 }
 
 
@@ -229,9 +230,8 @@ if [ "${0}" != "bash" ]; then
 	# run script
 	main
 else
-	# source file; it's an installation script so
-	#   unset all variables and functions
-	unset main writeMessage getTimestamp getInstallInfo source_ copy_ link_ backUp
+	# source file; it's an installation script so unset functions and return error
+	unset main writeMessage getTimestamp getInstallInfo sourceFile copyFile linkFile backUp
 	writeMessage "this script is not aimed to be sourced!!"
 	return 130
 fi

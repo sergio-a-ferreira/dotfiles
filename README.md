@@ -11,20 +11,21 @@
 * * *
 
 ### Getting Started ###
-General purpose configuration files for bash and ksh shells, and applications like vim, nano, git, dircolors.
+Manages versioning and deployment of CLI configuration files shared among diferent Unix/Linux CLI environments (bash/ksh based).
 
-Files for specific distros / flavours, desktop environments / window managers, terminals or other apllications shall have their own directory with proper instructions.
 
-To set up follow the instructions below, or simply run the script install.sh in the root directory (see Prerequisites section bellow).
 
+For now doesn't manage GUI configurations; files for specific distros/flavours, desktop environments/window managers, terminals and other applications shall have their own project with proper instructions.
+
+To set up follow the instructions below, or simply run the script install.sh in the root directory (see Prerequisites and Installation sections bellow).
+
+> Note: the information below assumes that you cloned the dotfiles project into the home directory; correct the path to the dotfiles directory if needed. If you run install.sh script change the DOTFILES_DIR variable to the pretended path.
 
 - #### profile.config ####
 
-  a simple shell profile configuration file; sources the environment from the shaman framework if available.
+  a shell profile configuration file; with common exports, aliases and functions.
 
-  to enable source from ~/.bashrc and / or ~/.kshrc.
-
-  edit the pretended shell rc file and add the following lines to the end of the file:
+  to enable source from ~/.bashrc or ~/.kshrc; edit the rc file and add the following lines to the end of the file:
 
   ```
   # source dotfiles/profile.config
