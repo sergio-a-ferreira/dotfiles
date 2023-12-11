@@ -154,7 +154,7 @@ sourceFile(){
 	writeMessage "sourcing file ${origin} in ${destiny}"
 
 	typeset msg_id="# source ${origin}"
-	typeset msg_line='[ -r ${origin} ] && . ${origin}'
+	typeset msg_line="[ -r ${origin} ] && . ${origin}"
 
 	if [ -f ${destiny} ]; then
 		grep -q "${msg_id}" ${destiny} && return 0
