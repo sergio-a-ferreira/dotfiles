@@ -110,37 +110,10 @@ linkFile(){
 	ln -s ${origin} ${destiny}
 }
 
-
-# ------------------------------------------------------------------------------
-backUp(){
-
-	# Description: evaluates if destiny exists and make a back
-	# Arguments  : 1 file destiny
-	#       - 0  : success
-	#       - >0 : error
-	# Notes      : 
-	#
-
-	typeset destiny="${1}"
-
-	if [ -e "${destiny}" ]; then
-		writeMessage "${destiny} exists; replacing with ${origin}"
-		if [ -L ${destiny} ]; then
-			# if link delete
-			rm ${destiny}
-		else
-			# if file / directory make backup
-			writeMessage "backing up ${destiny} as ${destiny}_dt_$(getTimestamp y2s)"
-			cp -pR ${destiny} ${destiny}_dt_$(getTimestamp y2s) && rm -rf ${destiny}
-		fi
-	fi
-}
-
-
 # ------------------------------------------------------------------------------
 sourceFile(){
 
-	# Description: copy a file; if file exists make backup
+	# Description: source file <origin> from file <destiny>
 	# Arguments  : 1 file origin
 	#              2 file destiny
 	#       - 0  : success
@@ -162,6 +135,32 @@ sourceFile(){
 
 	printf "\n${msg_id}\n${msg_line}\n" >> ${destiny}
 }
+
+# ------------------------------------------------------------------------------
+backUp(){
+
+	# Description: evaluates if destiny file exists and make a backup
+	# Arguments  : 1 file destiny
+	#       - 0  : success
+	#       - >0 : error
+	# Notes      : 
+	#
+
+	typeset destiny="${1}"
+
+	if [ -e "${destiny}" ]; then
+		writeMessage "${destiny} exists; replacing with ${origin}"
+		if [ -L ${destiny} ]; then
+			# if link delete
+			rm ${destiny}
+		else
+			# if file / directory make backup
+			writeMessage "backing up ${destiny} as ${destiny}_dt_$(getTimestamp y2s)"
+			cp -pR ${destiny} ${destiny}_dt_$(getTimestamp y2s) && rm -rf ${destiny}
+		fi
+	fi
+}
+
 
 # ------------------------------------------------------------------------------
 getInstallInfo(){
