@@ -33,7 +33,9 @@ typeset -A file_info=(
 	[git]="link|${DOTFILES_DIR}/git.config|${HOME}/.gitconfig"
 	[neofetch]="link|${DOTFILES_DIR}/neofetch.config|${HOME}/.config/neofetch/config.conf"
 	# add new files here
-
+	#  TODO:: pacman.conf needs sudo
+	#[pacman]="copy|${DOTFILES_DIR}/pacman.conf|/etc/pacman.conf"
+	
 )
 
 # ==============================================================================

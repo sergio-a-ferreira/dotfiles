@@ -29,8 +29,10 @@ To set up follow the instructions below, or simply run the script install.sh in 
 
   ```
   # source dotfiles/profile.config
-  [ -r ~/dotfiles/profile.config ] && . ~/dotfiles/profile.config
+  [ -r ~/Projects/dotfiles/profile.config ] && . ~/Projects/dotfiles/profile.config
   ```
+
+> adjust to your dotfiles path
 
 - #### vim.config ####
 
@@ -39,7 +41,7 @@ To set up follow the instructions below, or simply run the script install.sh in 
   to enable symlink ${HOME}/.vimrc to the vim.config file:
 
   ```
-  ln -s ~/dotfiles/vim.config ~/.vimrc
+  ln -s ~/Projects/dotfiles/vim.config ~/.vimrc
   ```
 
 - #### git.config ####
@@ -49,7 +51,7 @@ To set up follow the instructions below, or simply run the script install.sh in 
   to enable symlink ${HOME}/.gitconfig to the git.config file:
 
   ```
-  ln -s  ~/dotfiles/git.config ~/.gitconfig
+  ln -s  ~/Projects/dotfiles/git.config ~/.gitconfig
   ```
 
 - #### dircolors.config ####
@@ -60,7 +62,7 @@ To set up follow the instructions below, or simply run the script install.sh in 
 
   > to enable manually, source the output of the dircolors command:
   ```
-  dircolors ~/dotfiles/dircolors.config > /tmp/lscolors.tmp &&
+  dircolors ~/Projects/dotfiles/dircolors.config > /tmp/lscolors.tmp &&
     . /tmp/lscolors.tmp &&
     rm /tmp/lscolors.tmp
   ```
@@ -72,9 +74,21 @@ To set up follow the instructions below, or simply run the script install.sh in 
   to enable symlink ${HOME}/.config/neofetch/config.conf to the neofetch.config file:
 
   ```
-  ln -s  ~/dotfiles/neofetch.config ~/.config/neofetch/config.conf
+  ln -s  ~/Projects/dotfiles/neofetch.config ~/.config/neofetch/config.conf
 
   ```
+
+- #### pacman.conf ####
+
+  pacman configuration file.
+
+  to enable copy the file to /etc/; you need to escalate to root previleges:
+
+  ```
+  sudo cp ~/Projects/dotfiles/pacman.conf /etc/pacman.conf
+
+  ```
+
 
 * * * 
 
