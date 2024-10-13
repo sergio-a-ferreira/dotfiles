@@ -31,7 +31,7 @@ typeset -A file_info=(
 	[profile]="source|${DOTFILES_DIR}/profile.config|${HOME}/.bashrc"
 	[vim]="link|${DOTFILES_DIR}/vim.config|${HOME}/.vimrc"
 	[git]="link|${DOTFILES_DIR}/git.config|${HOME}/.gitconfig"
-	[neofetch]="link|${DOTFILES_DIR}/neofetch.config|${HOME}/.config/neofetch/config.conf"
+	[fastfetch]="link|${DOTFILES_DIR}/fastfetch.config.jsonc|${HOME}/.config/fastfetch/config.jsonc"
 	# add new files here
 	#  TODO:: pacman.conf needs sudo
 	#[pacman]="copy|${DOTFILES_DIR}/pacman.conf|/etc/pacman.conf"
