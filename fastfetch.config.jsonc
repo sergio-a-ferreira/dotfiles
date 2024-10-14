@@ -30,14 +30,23 @@
   "modules": [
     "break",
     {
-      "type": "title",
-      "format": "                                {6}{7}{8}"
-    },
-    "break",
-    {
       "type": "custom",
       "outputColor": "magenta",
       "format": "┌──────────────────────────────────────────────────────────────────────────────┐" // `\u001b` is `\033`, or `\e`
+    },
+    {
+      "type": "title",
+      "format": "                                {6}{7}{8}"
+    },
+    {
+      "type": "custom",
+      "outputColor": "magenta",
+      "format": "└──────────────────────────────────────────────────────────────────────────────┘" // `\u001b` is `\033`, or `\e`
+    },
+    {
+      "type": "custom",
+      "outputColor": "magenta",
+      "format": "┌─Hardware ────────────────────────────────────────────────────────────────────┐" // `\u001b` is `\033`, or `\e`
     },
     {
       "key": "    󰌢 Machine      ",
@@ -63,7 +72,7 @@
     {
       "key": "     Disk         ",
       "type": "disk",
-      "folders": "/:/boot:/mnt/data:/mnt/vault"
+      "folders": "/:/mnt/data:/mnt/vault"
     },
     /*{
       "key": "     DiskIO       ",
@@ -74,7 +83,16 @@
       "key":  "     Display      ",
       "type": "display",
     },
-    "break",
+    {
+      "type": "custom",
+      "outputColor": "magenta",
+      "format": "└──────────────────────────────────────────────────────────────────────────────┘" // `\u001b` is `\033`, or `\e`
+    },
+    {
+      "type": "custom",
+      "outputColor": "magenta",
+      "format": "┌─Software ────────────────────────────────────────────────────────────────────┐" // `\u001b` is `\033`, or `\e`
+    },
     {
       "key": "     Bios         ",
       "type": "bios"
@@ -132,7 +150,16 @@
       "key": "     Font         ",
       "type": "terminalfont"
     },
-    "break",
+    {
+      "type": "custom",
+      "outputColor": "magenta",
+      "format": "└──────────────────────────────────────────────────────────────────────────────┘" // `\u001b` is `\033`, or `\e`
+    },
+    {
+      "type": "custom",
+      "outputColor": "magenta",
+      "format": "┌─Network ─────────────────────────────────────────────────────────────────────┐" // `\u001b` is `\033`, or `\e`
+    },
     {
       "key": "     Wifi         ",
       "type": "wifi"
@@ -155,6 +182,24 @@
       "type": "netio",
       "compact": true
     },
+    {
+      "type": "custom",
+      "outputColor": "magenta",
+      "format": "└──────────────────────────────────────────────────────────────────────────────┘" // `\u001b` is `\033`, or `\e`
+    },
+    {
+      "type": "custom",
+      "outputColor": "magenta",
+      "format": "┌──────────────────────────────────────────────────────────────────────────────┐" // `\u001b` is `\033`, or `\e`
+    },
+    {
+      "type": "colors",
+      "paddingLeft": 34,
+      "symbol": "circle",
+      "block": {
+        "width": 10
+      }
+    },
     "break",
     {
       "key": "     Timestamp    ",
@@ -169,14 +214,5 @@
       "outputColor": "magenta",
       "format": "└──────────────────────────────────────────────────────────────────────────────┘" // `\u001b` is `\033`, or `\e`
     },
-    "break",
-    {
-      "type": "colors",
-      "paddingLeft": 34,
-      "symbol": "circle",
-      "block": {
-        "width": 10
-      }
-    }
   ]
 }
