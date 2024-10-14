@@ -69,12 +69,12 @@ To set up follow the instructions below, or simply run the script install.sh in 
 
 - #### neofetch.config ####
 
-  neofetch configuration file.
+  fastfetch configuration file.
 
-  to enable symlink ${HOME}/.config/neofetch/config.conf to the neofetch.config file:
+  to enable symlink ${HOME}/.config/fastfetch/fastfetch.config.jsonc to the fastfetch configuration file:
 
   ```
-  ln -s  ~/Projects/dotfiles/neofetch.config ~/.config/neofetch/config.conf
+  ln -s  ~/Projects/dotfiles/fastfetch.config.jsonc ~/.config/fastfetch/config.jsonc
 
   ```
 
