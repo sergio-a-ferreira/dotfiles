@@ -14,7 +14,7 @@
     "position": "left"
   },
   "general": {
-    "multithreading": true,
+//    "multithreading": true,
   },
   "display": {
     "separator": "➜   ",
