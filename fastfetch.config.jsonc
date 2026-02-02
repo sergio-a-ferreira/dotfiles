@@ -22,7 +22,7 @@
       "title": "blue",
       "keys": "blue",
       "output": "cyan",
-      "separator": "magenta",
+      "separator": "cyan",
     },
     //"stat": true,
     //"brightColor": false,
@@ -31,7 +31,7 @@
     "break",
     {
       "type": "custom",
-      "outputColor": "magenta",
+      "outputColor": "cyan",
       "format": "┌──────────────────────────────────────────────────────────────────────────────┐" // `\u001b` is `\033`, or `\e`
     },
     {
@@ -40,12 +40,12 @@
     },
     {
       "type": "custom",
-      "outputColor": "magenta",
+      "outputColor": "cyan",
       "format": "└──────────────────────────────────────────────────────────────────────────────┘" // `\u001b` is `\033`, or `\e`
     },
     {
       "type": "custom",
-      "outputColor": "magenta",
+      "outputColor": "cyan",
       "format": "┌─Hardware ────────────────────────────────────────────────────────────────────┐" // `\u001b` is `\033`, or `\e`
     },
     {
@@ -85,12 +85,12 @@
     },
     {
       "type": "custom",
-      "outputColor": "magenta",
+      "outputColor": "cyan",
       "format": "└──────────────────────────────────────────────────────────────────────────────┘" // `\u001b` is `\033`, or `\e`
     },
     {
       "type": "custom",
-      "outputColor": "magenta",
+      "outputColor": "cyan",
       "format": "┌─Software ────────────────────────────────────────────────────────────────────┐" // `\u001b` is `\033`, or `\e`
     },
     {
@@ -152,12 +152,12 @@
     },
     {
       "type": "custom",
-      "outputColor": "magenta",
+      "outputColor": "cyan",
       "format": "└──────────────────────────────────────────────────────────────────────────────┘" // `\u001b` is `\033`, or `\e`
     },
     {
       "type": "custom",
-      "outputColor": "magenta",
+      "outputColor": "cyan",
       "format": "┌─Network ─────────────────────────────────────────────────────────────────────┐" // `\u001b` is `\033`, or `\e`
     },
     {
@@ -184,12 +184,12 @@
     },
     {
       "type": "custom",
-      "outputColor": "magenta",
+      "outputColor": "cyan",
       "format": "└──────────────────────────────────────────────────────────────────────────────┘" // `\u001b` is `\033`, or `\e`
     },
     {
       "type": "custom",
-      "outputColor": "magenta",
+      "outputColor": "cyan",
       "format": "┌──────────────────────────────────────────────────────────────────────────────┐" // `\u001b` is `\033`, or `\e`
     },
     {
@@ -211,7 +211,7 @@
     },
     {
       "type": "custom",
-      "outputColor": "magenta",
+      "outputColor": "cyan",
       "format": "└──────────────────────────────────────────────────────────────────────────────┘" // `\u001b` is `\033`, or `\e`
     },
   ]
